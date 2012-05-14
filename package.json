@@ -1,0 +1,17 @@
+{
+  "author": "Brandon R. Stoner <monokrome@LimpidTech.com> (http://monokro.me)",
+  "name": "GaugesJS",
+  "description": "Exposing the gauges API to NodeJS - one endpoint at a time.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LimpidTech/GaugesJS",
+  "repository": {
+    "url": "https://github.com/LimpidTech/GaugesJS"
+  },
+  "main": "gaugesjs",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
