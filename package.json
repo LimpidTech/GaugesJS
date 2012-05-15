@@ -7,6 +7,9 @@
   "repository": {
     "url": "https://github.com/LimpidTech/GaugesJS"
   },
+  "scripts": {
+    "build": "coffee -co lib src"
+  },
   "main": "./lib/gaugesjs/index",
   "dependencies": {},
   "devDependencies": {},
