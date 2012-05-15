@@ -3,7 +3,7 @@ gauges.js
 
 Exposing the gauges API to NodeJS - one endpoint at a time. Maybe two.
 
-Usage
+Advanced Usage
 -----
 
 ### Initializing the API
