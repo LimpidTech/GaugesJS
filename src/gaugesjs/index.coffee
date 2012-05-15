@@ -4,13 +4,11 @@ url = require 'url'
 gauges_base_url = url.parse('https://secure.gaug.es')
 gauges_default_token = process.env.GAUGES_TOKEN
 
+# Client constructor. A factory which returns an API object in context of the
+# options provided as _options.
 this.client = (_options) ->
 	options = _options or {}
 	options.token = options.token or gauges_default_token
-
-	if !options.token?
-		callback 'A GAUGES_TOKEN environment variable or options.token must be
-		          provided.'
 
 	make_request = (_endpoint) ->
 		endpoint = url.parse _endpoint
@@ -22,6 +20,11 @@ this.client = (_options) ->
 				"X-Gauges-Token": options.token
 	
 		endpoint = (callback, opts) ->
+			if !options.token?
+				callback 'A GAUGES_TOKEN environment variable or options.token must be
+						  provided.'
+				return
+
 			request = http.get request_data, (response) ->
 				response.on 'data', (_data) ->
 					data = JSON.parse(_data.toString('UTF-8'))
