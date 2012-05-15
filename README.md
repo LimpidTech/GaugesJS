@@ -53,7 +53,7 @@ clients like this:
 
     client.init(function get_api(err, api) {
       api.clients(function get_clients(err, clients) {
-        # The `clients` variable now contains a list of your API'
+        # The `clients` variable now contains a list of your API's
         # authorized clients.
       })
     });
